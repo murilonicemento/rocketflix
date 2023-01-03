@@ -1,0 +1,75 @@
+/* GOOGLE FONTS FONT-FAMILY: POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --title: #fffcf9;
+    --subtitle: #b3b3b3;
+    --bg-button: #e9e6e3;
+    --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+}
+
+body {
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: var(--title);
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+}
+
+
+#container {
+    width: 533px;
+    margin-top: 126px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#logo p {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#container div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container div:nth-child(2) button {
+    width: 180px;
+    height: 47px;
+    background: url(/assets/img/favicon.svg) no-repeat 17px;
+    padding-left: 62px;
+    background-color: var(--bg-button);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#container div:nth-child(2) button:hover {
+    background-color: gainsboro;
+}
+
+#container div:nth-child(2) p {
+    width: 381px;
+    margin-top: 26px;
+    font-size: 14px;
+    text-align: center;
+}
