@@ -1,4 +1,9 @@
-const url = "https://api.themoviedb.org/3/movie/550?api_key=5f14008b75d650d7ea91274c3f7fb793";
+import {
+    API_KEY, BASE_URL,
+    IMG_URL,
+    language,
+} from './api.js'
+
 const button = document.querySelector("#btn");
 
 button.addEventListener("click", () => {
@@ -7,10 +12,14 @@ button.addEventListener("click", () => {
 })
 
 function getMovie() {
-    fetch(url)
+    fetch(`${BASE_URL}popular?${API_KEY}&${language}`)
     .then(response => response.json())
-    .catch(error => console.error(error));
+    .then(data => {
+        titleApi.textContent = data.results[0].original_title
+    })
+    .catch(error => console.error(error))
 }
+
 
 
 function showMovies() {
