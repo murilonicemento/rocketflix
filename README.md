@@ -2,8 +2,7 @@
 Projeto criado através da plataforma Rocketseat - Discover
 
 ## Deploy da aplicação
-
-
+https://rocketflix-nu.vercel.app/
 
 ## Tecnologias utilizadas
 
@@ -12,7 +11,7 @@ Projeto criado através da plataforma Rocketseat - Discover
 + JavaScript
 
 ## Estrutura do site
-
++ Botão: Ao ser clicado irá aparecer uma recomendação de um filme para assistir
 
 ## Tela Inicial 
 
