@@ -20,13 +20,17 @@ body {
     color: var(--title);
     background: var(--background);
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 
 #container {
-    width: 533px;
+    width: 800px;
     margin-top: 126px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #logo {
@@ -40,6 +44,12 @@ body {
 #logo p {
     font-size: 40px;
     font-weight: 700;
+}
+
+#movieApi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #container div:nth-child(3) {

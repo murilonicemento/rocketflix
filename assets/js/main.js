@@ -12,12 +12,16 @@ button.addEventListener("click", () => {
 })
 
 function getMovie() {
+    let resultArray = Math.floor(Math.random() * 20);
     fetch(`${BASE_URL}popular?${API_KEY}&${language}`)
-    .then(response => response.json())
-    .then(data => {
-        titleApi.textContent = data.results[0].original_title
-    })
-    .catch(error => console.error(error))
+        .then(response => response.json())
+        .then(data => {
+            imgApi.src = IMG_URL + "/" + data.results[resultArray].poster_path;
+            titleApi.textContent = data.results[resultArray].original_title;
+            descriptionApi.textContent = data.results[resultArray].overview;
+
+        })
+        .catch(error => console.error(error));
 }
 
 
@@ -30,17 +34,16 @@ function showMovies() {
 
     body.style.height = "100%";
 
-    movieApi.style.width = "533px";
+    movieApi.style.width = "800px";
     movieApi.style.height = "319px";
     movieApi.style.marginBottom = "30px";
 
     imgApi.style.width = "171px";
     imgApi.style.height = "243px";
-    imgApi.style.marginTop = "10px";
-    imgApi.src = "";
+    imgApi.style.marginRight = "25px"
 
-    contentMovieApi.style.width = "330px";
+    contentMovieApi.style.width = "600px";
     contentMovieApi.style.height = "274px";
     contentMovieApi.style.float = "right";
-    contentMovieApi.style.marginTop = "10px"
+    contentMovieApi.style.marginTop = "20px"
 }
