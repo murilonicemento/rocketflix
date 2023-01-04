@@ -16,5 +16,7 @@ Projeto criado através da plataforma Rocketseat - Discover
 
 ## Tela Inicial 
 
+<img src=".github/project-cover.png">
+
 <img src=".github/project.png">
 
