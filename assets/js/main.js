@@ -12,11 +12,12 @@ button.addEventListener("click", () => {
 })
 
 function getMovie() {
-    let resultArray = Math.floor(Math.random() * 20);
+    
 
     fetch(`${BASE_URL}popular?${API_KEY}&${language}`)
         .then(response => response.json())
         .then(data => {
+            let resultArray = Math.floor(Math.random() * data.results.length);
             imgApi.src = IMG_URL + "/" + data.results[resultArray].poster_path;
             titleApi.textContent = data.results[resultArray].original_title;
             overviewApi.textContent = data.results[resultArray].overview;
